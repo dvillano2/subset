@@ -62,6 +62,22 @@ print("Number of equidistributed planes:", subset_0.number_equidistributed_plane
 
 # Remove a point
 subset_0.remove_point((1, 3, 4))
+
+# Check the current subset size
+print("Subset size:", subset_0.size)
+
+# Add a few more points
+subset_0.add_point((1, 3, 4))
+subset_0.add_point((3, 3, 4))
+subset_0.add_point((6, 2, 4))
+subset_0.add_point((5, 1, 3))
+subset_0.add_point((4, 1, 3))
+
+# Check for equidistributed planes
+print("Number of equidistributed planes:", subset_0.number_equidistributed_planes)
+
+# See the directions along which there's equidistribution
+print("Equidistributed normal to the following directions:", subset_0.equidistributed_planes)
 ```
 
 ---
