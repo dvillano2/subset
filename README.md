@@ -1,7 +1,7 @@
 # Subset
 
 A Python class for representing subsets of vector spaces over the integers modulo a prime, with built-in tracking of directions and incidence structures (lines and planes).
-This was designed to work for dimension three. Computations become too slow very quickly as demension grows.
+This was designed to work for dimension three. Computations become too slow very quickly as dimension grows.
 This is a part of the pointconfig repo that I've broken off for independent use. 
 
 ---
@@ -40,7 +40,7 @@ After cloning the repo, you can use the `Subset` class like this:
 ```python
 from subset import Subset
 
-# Create a subset of F_7^5 (vectors over integers mod 7, dimension 3)
+# Create a subset of F_7^3 (vectors over integers mod 7, dimension 3)
 subset_0 = Subset(prime=7, dimension=3)
 
 # Add a few points
@@ -94,7 +94,7 @@ print("Equidistributed normal to the following directions:", subset_0.equidistri
 ## Notes
 
 - Removing a point with `remove_point` also updates all statistics.
-- This class is really desined for three dimensions and gets too slow very quickly. For example
+- This class is really designed for three dimensions and gets too slow very quickly. For example
     ```python
     subset_0 = Subset(7, 5)
     ```
