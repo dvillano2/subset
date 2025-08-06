@@ -84,7 +84,7 @@ class Subset:
         key = (self.space.prime, self.space.dimension)
         if key not in Subset._LOOKUP:
             raise KeyError(
-                f"The key f{key} is not in the shared lookup table yet."
+                f"The key {key} is not in the shared lookup table yet."
             )
         return Subset._LOOKUP[key]
 
