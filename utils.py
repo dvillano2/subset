@@ -36,14 +36,14 @@ def get_directions(
     yield from itertools.chain(sloped_directions, flat_directions)
 
 
-def get_plane_paramterizing_intercept(
+def get_plane_parameterizing_intercept(
     prime: int,
     dimension: int,
     point: PointType,
     normal_direction: DirectionType,
 ) -> int:
     """
-    Given a point and a nomal direction, gives the
+    Given a point and a normal direction, gives the
     'intercept' of the plane containing the point normal
     to the normal direction.
     """
@@ -57,7 +57,7 @@ def get_plane_paramterizing_intercept(
     return dot_product % prime
 
 
-def get_line_paramterizing_intercept(
+def get_line_parameterizing_intercept(
     prime: int,
     dimension: int,
     point: PointType,
@@ -95,7 +95,7 @@ def get_line_paramterizing_intercept(
         for point_coord, dir_coord in zip(mod_p_point, normalized_direction)
     ]
 
-    # Get rid of the guarateed zero coordinate
+    # Get rid of the guaranteed zero coordinate
     del intercept[nonzero_index]
     return tuple(intercept)
 
@@ -115,12 +115,12 @@ def create_lookup_entry(
     directions = get_directions(prime, dimension)
     for direction in directions:
         containment_info["planes"][direction] = (
-            get_plane_paramterizing_intercept(
+            get_plane_parameterizing_intercept(
                 prime, dimension, point, direction
             )
         )
         containment_info["lines"][direction] = (
-            get_line_paramterizing_intercept(
+            get_line_parameterizing_intercept(
                 prime, dimension, point, direction
             )
         )
