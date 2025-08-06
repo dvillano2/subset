@@ -25,7 +25,7 @@ def check_prime_dim_point_dir(
     direction: DirectionType,
 ) -> DirectionType:
     """
-    Basic checks form bad prime, dimension, point, and direction inputs
+    Basic checks for bad prime, dimension, point, and direction inputs
     """
     check_prime_dim(prime, dimension)
     for point_or_dir in (point, direction):
