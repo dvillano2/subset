@@ -27,7 +27,6 @@ class Subset:
     mod a prime. Keeps track of direction and incidence information.
     """
 
-    # MAKE THE KEYS AMBIENT SPACES
     _LOOKUP: Dict[Tuple[int, int], Dict[PointType, LookupEntryType]] = {}
 
     @classmethod
@@ -157,7 +156,7 @@ class Subset:
                 point
             ] = normalized_direction
 
-        # update plane indicence
+        # update plane incidence
         for normal_direction, intercept in self.get_lookup()[point][
             "planes"
         ].items():
@@ -297,6 +296,6 @@ class Subset:
     @property
     def number_of_directions_determined(self) -> int:
         """
-        Returns the all the directions determines.
+        Returns all the directions determines.
         """
         return len(self.point_pairs_per_direction)
