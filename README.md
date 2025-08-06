@@ -48,6 +48,9 @@ subset_0.add_point((0, 0, 0))
 subset_0.add_point((1, 3, 4))
 subset_0.add_point((2, 3, 4))
 
+# Check the current points
+print("Subset points:", subset_0.points)
+
 # Check the current subset size
 print("Subset size:", subset_0.size)
 
@@ -63,6 +66,9 @@ print("Number of equidistributed planes:", subset_0.number_equidistributed_plane
 # Remove a point
 subset_0.remove_point((1, 3, 4))
 
+# Check the current points
+print("Subset points:", subset_0.points)
+
 # Check the current subset size
 print("Subset size:", subset_0.size)
 
@@ -72,6 +78,9 @@ subset_0.add_point((3, 3, 4))
 subset_0.add_point((6, 2, 4))
 subset_0.add_point((5, 1, 3))
 subset_0.add_point((4, 1, 3))
+
+# Check the current points
+print("Subset points:", subset_0.points)
 
 # Check for equidistributed planes
 print("Number of equidistributed planes:", subset_0.number_equidistributed_planes)
