@@ -2,8 +2,8 @@
 Functions to check viability of various arguments
 """
 
-from pointconfig.config_types import DirectionType
-from pointconfig.config_types import PointType
+from config_types import DirectionType
+from config_types import PointType
 
 
 def check_prime_dim(prime: int, dimension: int) -> None:
