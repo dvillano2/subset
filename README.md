@@ -1,6 +1,7 @@
 # Subset
 
 A Python class for representing subsets of vector spaces over the integers modulo a prime, with built-in tracking of directions and incidence structures (lines and planes).
+This is a part of the pointconfig repo that I've broken off for independent use. 
 
 ---
 
