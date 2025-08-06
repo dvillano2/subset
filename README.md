@@ -15,7 +15,14 @@ This is a part of the pointconfig repo that I've broken off for independent use.
 
 ## Installation
 
-Clone the repo and make sure you have all the following files:
+Clone the repo:
+
+```
+git clone https://github.com/dvillano2/subset.git
+cd subset
+```
+
+Make sure you have all the following files:
 >
 > - `subset.py`
 > - `check_inputs.py`
