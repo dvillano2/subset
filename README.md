@@ -1,6 +1,7 @@
 # Subset
 
 A Python class for representing subsets of vector spaces over the integers modulo a prime, with built-in tracking of directions and incidence structures (lines and planes).
+This was designed to work for dimension three. Computations become too slow very quickly as demension grows.
 This is a part of the pointconfig repo that I've broken off for independent use. 
 
 ---
@@ -39,13 +40,13 @@ After cloning the repo, you can use the `Subset` class like this:
 ```python
 from subset import Subset
 
-# Create a subset of F_7^5 (vectors over integers mod 7, dimension 5)
-subset_0 = Subset(prime=7, dimension=5)
+# Create a subset of F_7^5 (vectors over integers mod 7, dimension 3)
+subset_0 = Subset(prime=7, dimension=3)
 
 # Add a few points
-subset_0.add_point((0, 0, 0, 0, 0))
-subset_0.add_point((1, 3, 4, 1, 1))
-subset_0.add_point((2, 3, 4, 0, 6))
+subset_0.add_point((0, 0, 0))
+subset_0.add_point((1, 3, 4))
+subset_0.add_point((2, 3, 4))
 
 # Check the current subset size
 print("Subset size:", subset_0.size)
@@ -60,7 +61,7 @@ print("Max line incidence:", subset_0.max_line_incidence)
 print("Number of equidistributed planes:", subset_0.number_equidistributed_planes)
 
 # Remove a point
-subset_0.remove_point((1, 3, 4, 1, 1))
+subset_0.remove_point((1, 3, 4))
 ```
 
 ---
@@ -68,4 +69,8 @@ subset_0.remove_point((1, 3, 4, 1, 1))
 ## Notes
 
 - Removing a point with `remove_point` also updates all statistics.
-- This class is designed for small primes and low dimensions.
+- This class is really desined for three dimensions and gets too slow very quickly. For example
+    ```python
+    subset_0 = Subset(7, 5)
+    ```
+  is unworkably slow.
