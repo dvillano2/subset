@@ -171,7 +171,7 @@ class Subset:
 
     def remove_point(self, point: PointType) -> None:
         """
-        Removes a point (mod p)from the subset and updates everything.
+        Removes a point (mod p) from the subset and updates everything.
         """
         if len(point) != self.space.dimension:
             raise ValueError("Length of point must match dimension")
@@ -195,7 +195,7 @@ class Subset:
         if point in self.directions_per_point:
             del self.directions_per_point[point]
 
-        # update plane indicence
+        # update plane incidence
         for normal_direction, intercept in self.get_lookup()[point][
             "planes"
         ].items():
@@ -296,6 +296,6 @@ class Subset:
     @property
     def number_of_directions_determined(self) -> int:
         """
-        Returns all the directions determined.
+        Returns number of directions determined.
         """
         return len(self.point_pairs_per_direction)
