@@ -177,7 +177,7 @@ class Subset:
             raise ValueError("Length of point must match dimension")
         point = tuple(coord % self.space.prime for coord in point)
         if point not in self.points:
-            raise KeyError("Point in not in the subset.")
+            raise KeyError("Point is not in the subset.")
         self.points.remove(point)
         # track the direction information
         for other_point in self.points:
