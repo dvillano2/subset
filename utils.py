@@ -71,7 +71,7 @@ def get_line_parameterizing_intercept(
     translating the point along the line until its
     zero and then deleting that coordinate
     """
-    # Nonsensical inputs
+    # Handles degenerate inputs
     mod_p_direction = checks.check_prime_dim_point_dir(
         prime, dimension, point, direction
     )
