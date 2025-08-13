@@ -296,6 +296,6 @@ class Subset:
     @property
     def number_of_directions_determined(self) -> int:
         """
-        Returns all the directions determines.
+        Returns all the directions determined.
         """
         return len(self.point_pairs_per_direction)
