@@ -18,7 +18,7 @@ def get_directions(
     prime: int, dimension: int
 ) -> Generator[DirectionType, None, None]:
     """
-    Gives all the directions in the vector space of
+    Gives all the directions in the vector space of the
     given dimension over the field with the given
     prime number of elements
     """
@@ -68,7 +68,7 @@ def get_line_parameterizing_intercept(
     tells you which of the parallel lines the point
     lies on. This is the dimension - 1 tuple obtained by
     finding the last nonzero (mod p) entry in the direction
-    translating the point along the line until its
+    translating the point along the line until it's
     zero and then deleting that coordinate
     """
     # Handles degenerate inputs
