@@ -224,7 +224,7 @@ class Subset:
     def line_incidence_threshold(self) -> Optional[int]:
         """
         Returns the threshold for maximum points on a given line.
-        If the subset does not have size that is a muliple of
+        If the subset does not have size that is a multiple of
         the prime, returns None.
         """
         if self.prime_multiple is None:
@@ -236,7 +236,7 @@ class Subset:
         """
         Returns True if the subset is below the maximum line
         incidence threshold.
-        If the subset does not have size that is a muliple of
+        If the subset does not have size that is a multiple of
         the prime, returns None.
         """
         if self.line_incidence_threshold is None:
